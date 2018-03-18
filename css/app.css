@@ -1,0 +1,196 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/**
+ * Deck
+ * Styles for the deck of cards
+ */
+
+.deck {
+   width: 660px;
+   min-height: 680px;
+   background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+   padding: 32px;
+   border-radius: 10px;
+   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 0 3em;
+}
+
+.deck .card {
+   height: 125px;
+   width: 125px;
+   background: #2e3d49;
+   font-size: 0px;
+   color: #ffffff;
+   border-radius: 8px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+   transform: rotateY(0);
+   background: #02b3e4;
+   cursor: default;
+   font-size: 33px;
+}
+
+.deck .card.match {
+   cursor: default;
+   background: #02ccba;
+   font-size: 33px;
+}
+
+.deck .card.unmatch {
+   cursor: default;
+   background: #FF6060;
+   font-size: 33px;
+}
+
+.deck .card:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.deck .card.disabled{
+  pointer-events: none;
+}
+.deck .card.enable{
+  pointer-events: auto;
+  cursor: default;
+}
+/*
+ * Styles for the Score Panel
+ */
+
+ .score-panel {
+     text-align: left;
+     width: 400px;
+     margin-bottom: 10px;
+ }
+
+ .score-panel .stars {
+     margin: 0;
+     padding: 0;
+     display: inline-block;
+     margin: 0 10px 0 0;
+ }
+
+ .score-panel .stars li {
+   list-style: none;
+   display: inline-block;
+}
+
+.timerInfo li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    display: inline;
+}
+
+#starRating li {
+    display: inline-block;
+}
+
+.movesInfo {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.timerInfo {
+  float: right;
+  margin-right: 10px;
+}
+
+.timer {
+  display: inline;
+}
+
+.modal {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+}
+
+.modalInfo {
+    padding-left: 30%;
+    padding-right: 30%;
+    width: 100%; 
+}
+
+.modalInfo p {
+    text-align: left;
+}
+
+.modalInfo .success {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.playAgainButton {
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.playAgainButtonInfo {
+  margin-bottom: 20px;
+  text-align: center;
+}
