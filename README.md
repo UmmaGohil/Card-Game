@@ -13,3 +13,6 @@ Download the zip file and click on the index.html file.
 * Created a deck of cards which shuffle everytime the user refreshes the page
 * A star rating was implemented; depending on the amount of moves made by user
 * All user's moves, star rating and time are recorded and shown at the end of the game via modal
+
+## To View the Project
+* https://ummagohil.github.io/Card-Game/
